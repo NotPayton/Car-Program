@@ -1,5 +1,6 @@
 import java.util.Random;
 public class Car {
+    //Iniatlizes all variables 
     private String make;
     private String model;
     private int year;
@@ -12,12 +13,16 @@ public class Car {
     private double mileage;
     private Random rand;
 
+
+    //Gives make model color fueltype and VinNum string text values 
     String Make[] = {"Kia, Nissan, Ford, Toyota, Honda"};
     String Model[] = {"Stinger, Skyline, F150, Supra, Civic"};
     String Color[] = {"Silver, Blue, White, Black"};
     String FuelType[] = {"Gas, Electric, Hybrid"};
     String VinNum = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 
+
+    //
     public String GetVin() {
         String VinBlank = ("");
         for (int i = 0; i < 17; i++) {
