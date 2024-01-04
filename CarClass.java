@@ -67,4 +67,9 @@ public class Car {
         return this.year + "" + this.make + "" + this.model;
     }
 
+
+public String carfax() {
+       return this.color + " " + this.year + " " + this.make + " " + this.model + System.lineSeparator() + this.mileage + " Miles" + System.lineSeparator() + "VIN: " + this.vin + System.lineSeparator() + "Top Speed: " + this.topspeed + System.lineSeparator() + this.economy + " MPG (" + this.fueltype + "), " + this.fueltank + " Gallon Capacity, " + this.range + " Range";
+   }
+
 }
