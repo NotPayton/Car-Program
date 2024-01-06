@@ -32,7 +32,7 @@ public class Car {
         return VinBlank;
     }
 
-    //Overload Constructor that makes a comepltely brand new random car
+    //Default Constructor that makes a comepltely brand new random car
     public Car() {
         rand = new Random();
         int num = rand.nextInt(Make.length);
@@ -48,7 +48,22 @@ public class Car {
         this.mileage = mileage;
     }
     
-    //Default Constructor where you made everthing up about the car
+    // Overloaded constructor that prins up the rest of the brand new car
+    public Car(String make, String model, int year, String color, String VIN, int topspeed, String fueltype) {
+        rand = new Random();
+        this.make = make;
+        this.model = model;
+        this.year = year;
+        this.color = color;
+        this.VIN = VIN;
+        this.topspeed = topspeed;
+        this.fueltype = fueltype;
+        this.fueleco = rand.nextInt(12, 20);
+        this.economy = rand.nextDouble(18.0, 28.0);
+        this.range = this.fueleco * this.economy;
+        this.mileage = 0.0;
+ 
+    //Exisiting Constructor where you made everthing up about the car
     public Car(String make, String model, int year, String color, String fueltype, double fueleco, double range, String VIN, int topspeed, double mileage) {
         this.make = make;
         this.model = model;
@@ -69,7 +84,7 @@ public class Car {
 
 
 public String carfax() {
-       return this.color + " " + this.year + " " + this.make + " " + this.model + System.lineSeparator() + this.mileage + " Miles" + System.lineSeparator() + "VIN: " + this.vin + System.lineSeparator() + "Top Speed: " + this.topspeed + System.lineSeparator() + this.economy + " MPG (" + this.fueltype + "), " + this.fueltank + " Gallon Capacity, " + this.range + " Range";
+       return this.color + " " + this.year + " " + this.make + " " + this.model + System.lineSeparator() + this.mileage + " Miles" + System.lineSeparator() + "VIN: " + this.vin + System.lineSeparator() + "Top Speed: " + this.topspeed + System.lineSeparator() + this.economy + " MPG (" + this.fueltype + "), " + this.fueleco + " Gallon Capacity, " + this.range + " Range";
    }
 
 }
